@@ -26,7 +26,6 @@ href="usr/share/git/ReleaseNotes.css">
 <div id="bottom-ball"></div>
 <div id="right-ball"></div>
 </div>
-</div>
 <div class="content">
 <h1>Git for Windows v2.34.1 Release Notes</h1>
 
@@ -63,7 +62,7 @@ href="usr/share/git/ReleaseNotes.css">
 <li><p>Git for Windows executables linked to <code>msys-2.0.dll</code> are not compatible with Mandatory ASLR and may crash if system-wide Mandatory ASLR is enabled in Windows Exploit protection. A workaround is to disable ASLR for all executables in <code>C:\Program Files\Git\usr\bin</code>, run in administrator powershell (replace <code>$_.Name</code> with <code>$_</code> to use full path to executable instead of name):</p>
 
 <blockquote>
-  <p><code>Get-Item -Path "C:\Program Files\Git\usr\bin\*.exe" | %{ Set-ProcessMitigation -Name $_.Name -Disable ForceRelocateImages }</code></p>
+  <p><javacode>Get-Item -Path "C:\Program Files\Git\usr\bin\*.exe" | %{ Set-ProcessMitigation -Name $_.Name -Disable ForceRelocateImages }</code></p>
 </blockquote>
 
 <p>Alternatively, you can disable Mandatory ASLR completely in Windows Exploit protection.</p></li>
@@ -148,7 +147,7 @@ href="usr/share/git/ReleaseNotes.css">
 <h3>Bug Fixes</h3>
 
 <ul>
-<li>A <a href="https://github.com/git-for-windows/git/issues/3368">bug</a> affecting older Windows versions that caused the installer to show the error message "Could not call proc" <a href="https://github.com/git-for-windows/build-extra/pull/374">was fixed</a>.</li>
+<li>A <a href="https://github.com/git-for-windows/git/svn/issues/3368">bug</a> affecting older Windows versions that caused the installer to show the error message "Could not call proc" <a href="https://github.com/git-for-windows/build-extra/pull/374">was fixed</a>.</li>
 </ul>
 
 </div><h2 id="v2.33.0" nr="5" class="collapsible"> Changes in v2.33.0<br /><small>since  v2.32.0(2) (July 6th 2021)</h2></small><div>
